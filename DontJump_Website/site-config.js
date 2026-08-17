@@ -1,5 +1,5 @@
 window.DONT_JUMP_SITE = {
-  supportEmail: "REPLACE-WITH-YOUR-SUPPORT-EMAIL@example.com",
+  supportEmail: "eric@teeter.com",
   appStoreUrl: "",
   gameStatus: "Coming soon to iPhone"
 };
