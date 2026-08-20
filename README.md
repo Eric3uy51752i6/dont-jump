@@ -1,13 +1,17 @@
-# DON'T JUMP — Playable Website
+# DON’T JUMP
 
-Upload the contents of this folder to any static host:
-- GitHub Pages
-- Netlify
-- Vercel
-- Cloudflare Pages
-- ordinary web hosting
+Official website and playable browser build for **DON’T JUMP — One Button. Bad Decisions.**
 
-`index.html` is the marketing/home page.
-`game/index.html` is the playable game.
+## Structure
 
-The browser build uses a simulated rewarded-ad flow because native AdMob does not run in a standalone browser page.
+- `index.html` — premium responsive game website
+- `game/index.html` — full 100-level browser game
+- `support.html` — support and troubleshooting
+- `privacy.html` — web-version privacy disclosures
+- `404.html` — custom GitHub Pages error page
+- `manifest.webmanifest` and `sw.js` — installable PWA shell
+- `assets/` — site styles, scripts, icons, and social preview
+
+The site is intentionally dependency-free and uses relative URLs so it works under the GitHub Pages `/dont-jump/` project path.
+
+The browser build uses a simulated rewarded-ad flow. Native AdMob is reserved for the future iOS app.

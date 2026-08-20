@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f3efe5"/>
+  <path d="M0 531h1200v99H0z" fill="#aeb0ad"/>
+  <path d="M0 531h1200" stroke="#17181b" stroke-width="10"/>
+  <g fill="#17181b" font-family="Arial Black,Arial,sans-serif" font-weight="900">
+    <text x="72" y="172" font-size="122" letter-spacing="-9">DON’T</text>
+    <text x="72" y="282" font-size="122" letter-spacing="-9">JUMP</text>
+  </g>
+  <path d="M78 310h205" stroke="#e64035" stroke-width="13"/>
+  <text x="79" y="371" fill="#17181b" font-family="Arial, sans-serif" font-size="31" font-weight="900" letter-spacing="2">ONE BUTTON.</text>
+  <text x="79" y="413" fill="#e64035" font-family="Arial, sans-serif" font-size="31" font-weight="900" letter-spacing="2">BAD DECISIONS.</text>
+  <g transform="translate(650 235)">
+    <rect width="250" height="250" rx="69" fill="#fffdf7" stroke="#17181b" stroke-width="20"/>
+    <ellipse cx="92" cy="110" rx="23" ry="45" fill="#17181b"/>
+    <ellipse cx="160" cy="110" rx="23" ry="45" fill="#17181b"/>
+  </g>
+  <path d="M895 531l101-220 107 220z" fill="#e64035" stroke="#aa1d17" stroke-width="17" stroke-linejoin="round"/>
+  <rect x="1088" y="176" width="27" height="355" fill="#20ad60"/>
+</svg>

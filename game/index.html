@@ -1,7 +1,13 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
-<meta name="theme-color" content="#0b0c0e"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><title>DON’T JUMP</title>
+<meta name="theme-color" content="#0b0c0e"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><title>Play DON’T JUMP — One Button. Bad Decisions.</title>
+<meta name="description" content="Play DON’T JUMP, a one-button platformer with 100 increasingly unreasonable levels."/>
+<link rel="canonical" href="https://eric3uy51752i6.github.io/dont-jump/game/"/>
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png"/>
+<link rel="stylesheet" href="../assets/css/game-shell.css"/>
+<script src="../assets/js/game-shell.js" defer></script>
 <style>
 :root{color-scheme:dark}*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#0b0c0e}
 body{display:grid;place-items:center;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;background:#0b0c0e;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
@@ -63,7 +69,19 @@ canvas{display:block;width:100%;height:100%;touch-action:none;cursor:pointer;-we
 <meta name="mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 <link rel="manifest" href="../manifest.webmanifest"/>
-</head><body><div id="shell"><canvas id="game"></canvas><div id="hint">SPACE / CLICK TO JUMP • ESC PAUSE</div><div id="djOverlay" class="dj-overlay"><div class="dj-modal"><h2 id="djModalTitle"></h2><p id="djModalHelp"></p><input id="djModalInput" maxlength="28"/><textarea id="djModalArea"></textarea><div class="dj-actions"><button id="djModalCancel">CANCEL</button><button id="djModalPrimary" class="primary">OK</button></div></div></div></div>
+</head><body>
+<div class="game-chrome" aria-label="Game controls">
+ <a class="game-back" href="../" aria-label="Return to the DON’T JUMP website"><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M12.8 3.8L6.6 10l6.2 6.2-1.6 1.6L3.4 10l7.8-7.8z"/></svg><span>WEBSITE</span></a>
+ <div class="game-tools">
+  <button type="button" data-game-restart aria-label="Restart current level"><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M10 3a7 7 0 106.6 9.3l-2-.7A4.9 4.9 0 1110 5.1c1.3 0 2.5.5 3.4 1.3L11 8.8h6V3l-2.1 2.1A6.9 6.9 0 0010 3z"/></svg><span>RESTART</span></button>
+  <button type="button" data-game-mute aria-label="Toggle game audio" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M3 8v4h3l4 3V5L6 8H3zm10.2-1.8l-1.4 1.4a3.4 3.4 0 010 4.8l1.4 1.4a5.4 5.4 0 000-7.6z"/></svg><span>MUTE</span></button>
+  <button type="button" data-game-fullscreen aria-label="Toggle fullscreen"><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M3 3h6v2H5v4H3V3zm8 0h6v6h-2V5h-4V3zM3 11h2v4h4v2H3v-6zm12 0h2v6h-6v-2h4v-4z"/></svg><span>FULLSCREEN</span></button>
+ </div>
+</div>
+<div id="gameBoot" class="game-boot" aria-hidden="true"><div class="game-boot-blob"></div><span>LOADING BAD DECISIONS</span><div class="game-boot-line"><i></i></div></div>
+<div id="gameError" class="game-error" role="alert"><div class="game-error-inner"><h1>NOPE.</h1><p>The game missed the platform. Check your connection and try loading it again.</p><div class="game-error-actions"><button type="button" data-game-retry>RETRY</button><a href="../">RETURN HOME</a></div></div></div>
+<div id="gameAnnounce" class="sr-only" aria-live="polite"></div>
+<div id="shell"><canvas id="game" aria-label="DON’T JUMP game canvas. Press Space, click, or tap to jump."></canvas><div id="hint">SPACE / CLICK TO JUMP • ESC PAUSE</div><div id="djOverlay" class="dj-overlay"><div class="dj-modal"><h2 id="djModalTitle"></h2><p id="djModalHelp"></p><input id="djModalInput" maxlength="28"/><textarea id="djModalArea"></textarea><div class="dj-actions"><button id="djModalCancel">CANCEL</button><button id="djModalPrimary" class="primary">OK</button></div></div></div></div>
 <script src="app-config.js"></script>
 <script>(()=>{'use strict';
 // MINIMAL PLAY-FIRST UI PASS: presentation rebuilt; gameplay/progression/create/share preserved.
@@ -2611,5 +2629,11 @@ const STEP=1/120;let last=performance.now(),acc=0;function update(dt){
  }
  drawAchievementToast();
 }window.__CREATE_QA={get levels(){return createdLevels},get app(){return app},get game(){return game},get save(){return save},get campaign(){return LEVELS},spikeVersion:SPIKE_REACTION_VERSION,spikeModel,spikeBlobOverlap,sweepSpikeImpact,collectSpikeHazards,earliestSpikeImpact,spikeReactionPose,start,die,setReduceMotion,validateCreatedLevel,createdToRuntime,encodeShare,decodeShare,blankCreated,beginNewCreated,openEditor,startCreatedLevel,finishCreatedRun,saveCreated,updateGame,complete,restartCurrent,get creator(){return creator},setMode:m=>app.mode=m,render:()=>render()};
+window.__DJ_HOST={
+ get muted(){return !audio.enabled},
+ toggleMute(){audio.set(!audio.enabled);return audio.enabled},
+ restart(){if(app.mode==='game'||app.mode==='pause')restartCurrent();else if(app.mode==='title')start(campaignContinueLevel())},
+ pause(){if(app.mode==='game')pause();else if(app.mode==='pause')resume()}
+};
 function frame(now){let d=Math.min(.05,(now-last)/1000||0);last=now;acc+=d;let s=0;while(acc>=STEP&&s<8){update(STEP);acc-=STEP;s++}render();requestAnimationFrame(frame)}requestAnimationFrame(frame);
 })();</script><script>if('serviceWorker' in navigator){navigator.serviceWorker.register('../sw.js').catch(()=>{})}</script></body></html>

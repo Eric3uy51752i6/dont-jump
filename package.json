@@ -1,0 +1,14 @@
+{
+  "name": "dont-jump-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "assets": "node scripts/generate-assets.mjs",
+    "smoke": "node scripts/runtime-smoke.mjs",
+    "qa": "node scripts/qa.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.55.0",
+    "sharp": "^0.34.3"
+  }
+}
