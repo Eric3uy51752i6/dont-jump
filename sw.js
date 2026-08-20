@@ -1,4 +1,4 @@
-const VERSION = 'dont-jump-v4-20260820';
+const VERSION = 'dont-jump-v5-20260820';
 const SHELL = [
   './',
   './index.html',
@@ -6,7 +6,7 @@ const SHELL = [
   './support.html',
   './privacy.html',
   './manifest.webmanifest',
-  './assets/css/site.css',
+  './assets/css/site.css?v=4',
   './assets/css/game-shell.css',
   './assets/js/site.js',
   './assets/js/game-shell.js',
