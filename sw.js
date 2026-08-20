@@ -1,4 +1,4 @@
-const VERSION = 'dont-jump-v3-20260820';
+const VERSION = 'dont-jump-v4-20260820';
 const SHELL = [
   './',
   './index.html',
