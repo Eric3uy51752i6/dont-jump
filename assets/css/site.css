@@ -130,7 +130,7 @@ svg{display:block;fill:currentColor}
 @keyframes tapcue{0%,100%{transform:translate(0)}50%{transform:translateY(6px)}}
 
 /* Moving strap */
-.marquee{overflow:hidden;border-block:2px solid var(--ink);background:var(--yellow);transform:rotate(-1deg) scale(1.01)}
+.marquee{overflow:hidden;border-block:2px solid var(--ink);background:var(--yellow);transform:rotate(-1deg) scale(.99)}
 .marquee>div{display:flex;align-items:center;width:max-content;gap:32px;padding:16px 0;font-size:13px;font-weight:950;letter-spacing:.16em;animation:marquee 24s linear infinite}
 .marquee i{font-style:normal;color:var(--red)}.marquee b{font-weight:950}
 .marquee span::after,.marquee b::after,.marquee i::after{content:"◆";margin-left:32px;font-size:7px}
