@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="theme-color" content="#f4f1e8"/>
+<title>DON'T JUMP — One Button. Bad Decisions.</title>
+<meta name="description" content="DON'T JUMP is a one-button platform game. Tap. Jump. Regret."/>
+<meta property="og:title" content="DON'T JUMP"/>
+<meta property="og:description" content="ONE BUTTON. BAD DECISIONS."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="assets/og-image.jpg"/>
+<link rel="manifest" href="manifest.webmanifest"/>
+<link rel="icon" href="assets/icon-192.png"/>
+<link rel="apple-touch-icon" href="assets/icon-192.png"/>
+<style>
+:root{
+  --cream:#f4f1e8;
+  --ink:#17181b;
+  --muted:#7b7b80;
+  --red:#e73b32;
+  --yellow:#f1c84c;
+  --green:#5cab6b;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
+body{min-height:100dvh}
+.wrap{width:min(1100px,calc(100% - 32px));margin:auto}
+nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.brand{font-weight:950;letter-spacing:-.04em;font-size:21px}
+.navlinks{display:flex;gap:18px;align-items:center}
+.navlinks a{color:var(--ink);text-decoration:none;font-size:13px;font-weight:750}
+.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:center;padding:52px 0 76px}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:850;letter-spacing:.11em;text-transform:uppercase}
+.dot{width:8px;height:8px;border-radius:999px;background:var(--red)}
+h1{font-size:clamp(62px,10vw,128px);line-height:.78;letter-spacing:-.085em;margin:23px 0 28px;font-weight:1000}
+.tag{font-size:clamp(19px,2.8vw,32px);font-weight:900;letter-spacing:-.03em;margin-bottom:18px}
+.sub{max-width:600px;color:#5f6065;font-size:17px;line-height:1.55;margin:0 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:14px;font-weight:900;text-decoration:none;transition:.12s transform,.12s box-shadow}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:var(--ink);color:white;box-shadow:0 7px 0 rgba(0,0,0,.12)}
+.secondary{border:2px solid var(--ink);color:var(--ink);background:transparent}
+.phone{justify-self:center;position:relative;width:min(330px,78vw);aspect-ratio:390/844;border:11px solid #202126;border-radius:48px;background:#111216;box-shadow:0 25px 70px rgba(0,0,0,.17);overflow:hidden}
+.phone iframe{width:100%;height:100%;border:0;background:#111216}
+.badge{position:absolute;right:-36px;top:78px;background:var(--yellow);padding:11px 15px;border-radius:12px;font-size:12px;font-weight:950;transform:rotate(5deg);box-shadow:0 8px 25px rgba(0,0,0,.12)}
+.section{padding:76px 0}
+.section h2{font-size:clamp(38px,6vw,72px);letter-spacing:-.06em;margin:0 0 28px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:rgba(255,255,255,.45);border:1px solid rgba(0,0,0,.08);border-radius:20px;padding:24px;min-height:170px}
+.card strong{font-size:22px;display:block;margin-bottom:8px}
+.card p{color:#66676c;line-height:1.5;margin:0}
+.playstrip{background:var(--ink);color:white;border-radius:28px;padding:44px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin:42px 0 90px}
+.playstrip h3{font-size:clamp(30px,5vw,58px);letter-spacing:-.05em;margin:0}
+.playstrip .btn{background:white;color:var(--ink)}
+footer{border-top:1px solid rgba(0,0,0,.1);padding:28px 0 40px;color:#6a6b70;font-size:13px}
+footer .row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+footer a{color:inherit}
+@media(max-width:820px){
+ .hero{grid-template-columns:1fr;padding-top:24px}
+ .phone{order:2}
+ .cards{grid-template-columns:1fr}
+ .navlinks a.hide-sm{display:none}
+ .playstrip{align-items:flex-start;flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <div class="brand">DON'T JUMP</div>
+  <div class="navlinks">
+    <a class="hide-sm" href="#about">ABOUT</a>
+    <a href="support.html">SUPPORT</a>
+    <a class="btn primary" style="min-height:40px;padding:0 16px;border-radius:10px" href="game/">PLAY</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <div class="kicker"><span class="dot"></span> One-button platform game</div>
+    <h1>DON'T<br>JUMP</h1>
+    <div class="tag">ONE BUTTON. BAD DECISIONS.</div>
+    <p class="sub">Tap to jump. That's it. The levels, however, have other ideas. 100 increasingly unreasonable levels, weird Blob unlocks, instant retries, and absolutely no sympathy.</p>
+    <div class="actions">
+      <a class="btn primary" href="game/">PLAY NOW</a>
+      <a class="btn secondary" href="#about">WHAT IS THIS?</a>
+    </div>
+  </div>
+
+  <div class="phone">
+    <iframe src="game/" title="DON'T JUMP game preview" loading="eager"></iframe>
+    <div class="badge">YES, IT'S PLAYABLE</div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h2>Tap. Jump.<br>Regret.</h2>
+  <div class="cards">
+    <div class="card"><strong>100 Levels</strong><p>Short, fast, increasingly mean levels built around timing, traps, gravity, fake-outs and bad decisions.</p></div>
+    <div class="card"><strong>Instant Retry</strong><p>Dying is part of the rhythm. No waiting, no loading screen, just one more attempt.</p></div>
+    <div class="card"><strong>Unlock Blobs</strong><p>Keep progressing and unlock increasingly weird versions of your nervous little square friend.</p></div>
+  </div>
+</section>
+
+<div class="playstrip">
+  <div>
+    <h3>Think you're ready?</h3>
+    <div style="margin-top:8px;color:#b7b8bd;font-weight:650">Probably not. Play anyway.</div>
+  </div>
+  <a class="btn" href="game/">PLAY DON'T JUMP</a>
+</div>
+
+<footer>
+  <div class="row">
+    <div>© 2026 DON'T JUMP</div>
+    <div>
+      <a href="support.html">Support</a>
+      &nbsp;&nbsp;•&nbsp;&nbsp;
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+</div>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{})}</script></body>
+</html>
