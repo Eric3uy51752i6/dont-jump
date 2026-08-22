@@ -106,7 +106,7 @@ a { color: inherit; }
 .teaser-objective { position: absolute; z-index: 7; left: 20px; top: 18px; display: flex; flex-direction: column; gap: 5px; padding-left: 11px; border-left: 3px solid var(--red); }
 .teaser-objective span { color: rgba(255,255,255,.4); font-size: 6px; font-weight: 950; letter-spacing: .15em; }
 .teaser-objective strong { color: #fff; font-size: 10px; letter-spacing: .08em; }
-.teaser-result { position: absolute; z-index: 7; right: 19px; top: 18px; padding: 9px 11px; border: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.7); font-size: 7px; font-weight: 950; letter-spacing: .11em; }
+.teaser-result { position: absolute; z-index: 7; right: 100px; top: 18px; padding: 9px 11px; border: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.7); font-size: 7px; font-weight: 950; letter-spacing: .11em; }
 .stage-floor { position: absolute; z-index: 2; bottom: 0; height: 24%; background: #65666c; border-top: 4px solid #e1e1e2; box-shadow: inset 0 12px 0 rgba(255,255,255,.025); }
 .stage-floor--start { left: 0; width: 45%; }
 .stage-floor--finish { right: 0; width: 29%; }
@@ -133,7 +133,7 @@ a { color: inherit; }
 .game-stage.did-jump .blob-shadow { transform: translate(460%) scale(.58); opacity: .28; }
 .game-stage.did-jump .teaser-result { border-color: rgba(84,184,122,.55); background: rgba(84,184,122,.12); color: #a9f0c4; }
 .game-stage.did-jump .jump-arc i { background: rgba(255,255,255,.58); }
-.stage-tap { position: absolute; z-index: 8; left: 50%; bottom: 18px; transform: translateX(-50%); min-width: 178px; min-height: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border: 1px solid rgba(255,255,255,.34); background: rgba(24,25,29,.86); color: #fff; cursor: pointer; backdrop-filter: blur(8px); }
+.stage-tap { position: absolute; z-index: 8; left: 50%; top: 72px; transform: translateX(-50%); min-width: 158px; min-height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border: 1px solid rgba(255,255,255,.34); background: rgba(24,25,29,.86); color: #fff; cursor: pointer; backdrop-filter: blur(8px); }
 .stage-tap span { font-size: 8px; font-weight: 950; letter-spacing: .13em; }
 .stage-tap small { color: rgba(255,255,255,.42); font-size: 6px; font-weight: 850; letter-spacing: .12em; }
 .stage-tap:hover { background: var(--red); border-color: var(--red); }
@@ -447,7 +447,7 @@ a { color: inherit; }
   .goal { bottom: 25%; height: 35%; }
   .landing-target { right: 15%; bottom: calc(25% - 6px); width: 48px; }
   .jump-arc { left: 27%; top: 34%; width: 46%; }
-  .stage-tap { min-width: 142px; min-height: 43px; bottom: 10px; }
+  .stage-tap { top: 60px; min-width: 138px; min-height: 41px; }
   .game-stage.did-jump .hero-blob { transform: translate(390%,-140%) rotate(12deg) scale(.9,1.1); }
   .game-stage.did-jump .blob-shadow { transform: translate(390%) scale(.58); }
   .preview-footer { min-height: 0; grid-template-columns: repeat(3,1fr); }
