@@ -39,6 +39,8 @@
   /* Hero mini-game */
   const stage = document.querySelector('[data-stage]');
   const jumpButton = document.querySelector('[data-jump]');
+  const jumpCopy = document.querySelector('[data-jump-copy]');
+  const teaserResult = document.querySelector('[data-teaser-result]');
   let jumpLocked = false;
 
   const jump = () => {
@@ -49,15 +51,17 @@
     stage.classList.add('did-jump');
     playTone(510, .09, 'square', .025);
     window.setTimeout(() => playTone(740, .06, 'triangle', .025), 210);
-    if (jumpButton) jumpButton.textContent = 'NICE.';
+    if (jumpCopy) jumpCopy.textContent = 'CLEARED IT';
+    if (teaserResult) teaserResult.textContent = 'NICE. NOW TRY 99 MORE.';
     if ('vibrate' in navigator && matchMedia('(pointer: coarse)').matches) {
       try { navigator.vibrate(8); } catch (_) {}
     }
     window.setTimeout(() => {
       stage.classList.remove('did-jump');
-      if (jumpButton) jumpButton.textContent = 'MAKE HIM JUMP';
+      if (jumpCopy) jumpCopy.textContent = 'TRY THE JUMP';
+      if (teaserResult) teaserResult.textContent = 'YOUR TURN.';
       jumpLocked = false;
-    }, 650);
+    }, 900);
   };
 
   jumpButton?.addEventListener('click', (event) => {

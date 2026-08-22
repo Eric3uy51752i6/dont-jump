@@ -19,7 +19,7 @@
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <meta name="leaderboard-api" content="">
-  <link rel="stylesheet" href="assets/css/site.css?v=9">
+  <link rel="stylesheet" href="assets/css/site.css?v=10">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -57,30 +57,37 @@
         <p class="availability"><i aria-hidden="true"></i> PLAY IN YOUR BROWSER · iPHONE VERSION COMING SOON</p>
       </div>
 
-      <div class="hero-preview" aria-label="Preview of the DON’T JUMP game">
+      <div class="hero-preview" aria-label="Interactive preview of the DON’T JUMP game">
         <div class="preview-chrome">
-          <span>LEVEL 01</span>
-          <div aria-hidden="true"><i></i><i></i><i></i></div>
-          <span>0 DEATHS</span>
+          <div class="preview-level"><span>LEVEL 01</span><strong>JUST JUMP</strong></div>
+          <div class="preview-live"><i aria-hidden="true"></i> INTERACTIVE PREVIEW</div>
+          <div class="preview-deaths"><span>DEATHS</span><strong data-teaser-deaths>0</strong></div>
         </div>
         <div class="game-stage" data-stage>
           <div class="stage-grid" aria-hidden="true"></div>
+          <div class="stage-glow" aria-hidden="true"></div>
           <div class="stage-cloud cloud-one" aria-hidden="true"></div>
           <div class="stage-cloud cloud-two" aria-hidden="true"></div>
-          <div class="tap-label" aria-hidden="true">TAP!</div>
+          <div class="teaser-objective"><span>OBJECTIVE</span><strong>CLEAR THE SPIKES</strong></div>
+          <div class="teaser-result" data-teaser-result aria-live="polite">YOUR TURN.</div>
+          <div class="jump-arc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
           <div class="blob hero-blob" aria-hidden="true"><i></i><i></i></div>
           <div class="blob-shadow" aria-hidden="true"></div>
+          <div class="start-line" aria-hidden="true"><span>JUMP</span></div>
           <div class="spikes" aria-hidden="true"><i></i><i></i><i></i></div>
-          <div class="goal" aria-hidden="true"><span></span></div>
-          <div class="ground" aria-hidden="true"></div>
-          <button class="stage-tap" type="button" data-jump>MAKE HIM JUMP</button>
+          <div class="landing-target" aria-hidden="true"><i></i></div>
+          <div class="goal" aria-hidden="true"><span></span><b>SAFE?</b></div>
+          <div class="stage-floor stage-floor--start" aria-hidden="true"></div>
+          <div class="stage-floor stage-floor--finish" aria-hidden="true"></div>
+          <button class="stage-tap" type="button" data-jump><span data-jump-copy>TRY THE JUMP</span><small>TAP / SPACE</small></button>
         </div>
         <div class="preview-footer">
-          <span>SPACE / TAP</span>
-          <strong>ONE BUTTON. BAD DECISIONS.</strong>
+          <div><span>CONTROL</span><strong>ONE TAP</strong></div>
+          <div><span>RESTART</span><strong>0.2 SEC</strong></div>
+          <div><span>DIFFICULTY</span><strong>RUDE</strong></div>
+          <a href="game/">PLAY FULL GAME <b aria-hidden="true">→</b></a>
         </div>
-        <div class="floating-card floating-card--levels"><strong>100</strong><span>LEVELS</span></div>
-        <div class="floating-card floating-card--deaths"><strong>∞</strong><span>RETRIES</span></div>
+        <div class="teaser-stamp" aria-hidden="true"><span>PLAYABLE</span><strong>TEASER</strong></div>
       </div>
     </section>
 
@@ -367,6 +374,6 @@
   </footer>
 
   <script src="assets/js/leaderboard-config.js?v=1"></script>
-  <script src="assets/js/site.js?v=9" defer></script>
+  <script src="assets/js/site.js?v=10" defer></script>
 </body>
 </html>
