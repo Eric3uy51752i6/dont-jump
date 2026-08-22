@@ -272,6 +272,7 @@ a { color: inherit; }
 .leaderboard-title > button:hover { border-color: var(--green); color: var(--green); }
 .board-status { min-height: 34px; display: flex; align-items: center; padding: 0 11px; background: rgba(84,184,122,.1); color: #a9f0c4; font-size: 8px; font-weight: 900; letter-spacing: .1em; }
 .board-status.is-error { background: rgba(237,83,63,.12); color: #ff988a; }
+.board-status.is-soon { background: rgba(244,200,74,.12); color: #f4d878; }
 .board-status.is-live::before { content: ""; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: var(--green); }
 .leaderboard-scroll { overflow-x: auto; }
 .leaderboard-card table { width: 100%; border-collapse: collapse; }

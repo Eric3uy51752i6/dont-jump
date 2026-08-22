@@ -111,6 +111,7 @@
   const apiBase = configApi.replace(/\/$/, '');
   const boardBody = document.querySelector('[data-leaderboard]');
   const boardStatus = document.querySelector('[data-board-status]');
+  const boardKicker = document.querySelector('[data-board-kicker]');
   const scoreForm = document.querySelector('[data-score-form]');
   const submitButton = document.querySelector('[data-submit-score]');
   const shareButton = document.querySelector('[data-share-result]');
@@ -179,6 +180,7 @@
     boardStatus.textContent = message;
     boardStatus.classList.toggle('is-error', state === 'error');
     boardStatus.classList.toggle('is-live', state === 'live');
+    boardStatus.classList.toggle('is-soon', state === 'soon');
   };
 
   const formatTime = (timeMs) => {
@@ -220,7 +222,8 @@
 
   const loadLeaderboard = async () => {
     if (!apiBase) {
-      setBoardStatus('ONLINE BOARD READY — CLOUDFLARE ACTIVATION NEEDED', 'error');
+      setBoardStatus('LIVE LEADERBOARD OPENS SOON', 'soon');
+      if (boardKicker) boardKicker.textContent = 'ONLINE SOON';
       renderLeaderboard([]);
       if (submitButton) submitButton.disabled = true;
       return;
@@ -232,6 +235,7 @@
       showDaily(daily.challenge);
       const board = await fetchJson(`/api/leaderboard?date=${encodeURIComponent(daily.challenge.date)}`);
       renderLeaderboard(board.leaderboard);
+      if (boardKicker) boardKicker.textContent = 'LIVE ONLINE';
       setBoardStatus('LIVE · TODAY’S BEST RUNS', 'live');
       if (submitButton) submitButton.disabled = false;
     } catch (_) {
