@@ -133,44 +133,6 @@ a { color: inherit; }
 .proof-grid strong { color: var(--red); font-size: 37px; letter-spacing: -.06em; }
 .proof-grid span { max-width: 120px; font-size: 8px; font-weight: 950; line-height: 1.5; letter-spacing: .1em; }
 
-/* Animated trailer */
-.trailer { background: var(--cream); }
-.trailer-heading { margin-bottom: 55px; }
-.trailer-window { border: 2px solid var(--ink); background: var(--white); box-shadow: 14px 16px 0 rgba(24,25,29,.12); }
-.trailer-top, .trailer-controls { min-height: 50px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 20px; font-size: 8px; font-weight: 950; letter-spacing: .12em; }
-.trailer-top { border-bottom: 2px solid var(--ink); }
-.trailer-top b { color: var(--red); }
-.trailer-controls { border-top: 2px solid var(--ink); }
-.trailer-controls button, .trailer-controls a { border: 0; background: transparent; color: inherit; text-decoration: none; font-size: 8px; font-weight: 950; letter-spacing: .12em; cursor: pointer; }
-.trailer-controls button:hover, .trailer-controls a:hover { color: var(--red); }
-.trailer-controls > div { display: flex; align-items: center; gap: 9px; color: var(--muted); }
-.trailer-controls > div i { width: 7px; height: 7px; border-radius: 50%; background: var(--red); animation: recordPulse 1.2s ease infinite; }
-.trailer-stage { position: relative; aspect-ratio: 16 / 7.7; overflow: hidden; background: var(--soft-ink); }
-.trailer-grid { position: absolute; inset: 0; opacity: .35; background-image: linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px); background-size: 52px 52px; }
-.trailer-floor { position: absolute; z-index: 2; bottom: 0; height: 21%; background: #67686d; border-top: 4px solid #dedee0; }
-.floor-a { left: 0; width: 62%; }.floor-b { right: 0; width: 25%; }
-.trailer-blob { position: absolute; z-index: 5; left: 10%; bottom: 21%; width: 78px; height: 78px; animation: trailerRun 12s var(--ease) infinite; }
-.trailer-spikes { position: absolute; z-index: 4; left: 47%; bottom: 21%; display: flex; }
-.trailer-spikes i { width: 0; height: 0; border-left: 30px solid transparent; border-right: 30px solid transparent; border-bottom: 84px solid var(--red); filter: drop-shadow(0 6px 0 var(--red-dark)); }
-.trailer-goal { position: absolute; z-index: 3; right: 8%; bottom: 21%; width: 10px; height: 48%; background: var(--green); }
-.trailer-copy strong { position: absolute; z-index: 8; left: 50%; top: 42%; color: #fff; font-size: clamp(40px,7vw,104px); letter-spacing: -.07em; transform: translate(-50%,-50%) scale(.85); opacity: 0; white-space: nowrap; }
-.trailer-copy strong:nth-child(1) { animation: trailerTitleOne 12s ease infinite; }
-.trailer-copy strong:nth-child(2) { color: var(--red); animation: trailerTitleTwo 12s ease infinite; }
-.trailer-copy strong:nth-child(3) { animation: trailerTitleThree 12s ease infinite; }
-.trailer-flash { position: absolute; z-index: 9; inset: 0; display: grid; place-items: center; background: var(--red); color: #fff; font-size: clamp(76px,14vw,190px); font-weight: 1000; letter-spacing: -.08em; opacity: 0; animation: trailerFlash 12s linear infinite; }
-.trailer-window.replay .trailer-blob, .trailer-window.replay .trailer-copy strong, .trailer-window.replay .trailer-flash { animation-name: none; }
-.trailer-window.replay.running .trailer-blob { animation-name: trailerRun; }
-.trailer-window.replay.running .trailer-copy strong:nth-child(1) { animation-name: trailerTitleOne; }
-.trailer-window.replay.running .trailer-copy strong:nth-child(2) { animation-name: trailerTitleTwo; }
-.trailer-window.replay.running .trailer-copy strong:nth-child(3) { animation-name: trailerTitleThree; }
-.trailer-window.replay.running .trailer-flash { animation-name: trailerFlash; }
-@keyframes recordPulse { 50% { opacity: .3; } }
-@keyframes trailerRun { 0%,18%{transform:none} 30%{transform:translate(360%,-180%) rotate(8deg) scale(.92,1.08)} 40%{transform:translate(500%,-10%) scale(1.1,.88)} 58%{transform:translate(650%,-25%)} 68%{transform:translate(820%,310%) rotate(70deg)} 100%{transform:translate(820%,310%) rotate(70deg)} }
-@keyframes trailerFlash { 0%,67%,73%,100%{opacity:0} 68%,71%{opacity:1} }
-@keyframes trailerTitleOne { 0%,3%{opacity:0;transform:translate(-50%,-50%) scale(.85)} 7%,13%{opacity:1;transform:translate(-50%,-50%) scale(1)} 17%,100%{opacity:0;transform:translate(-50%,-50%) scale(1.1)} }
-@keyframes trailerTitleTwo { 0%,75%{opacity:0;transform:translate(-50%,-50%) scale(.85)} 79%,87%{opacity:1;transform:translate(-50%,-50%) scale(1)} 91%,100%{opacity:0;transform:translate(-50%,-50%) scale(1.1)} }
-@keyframes trailerTitleThree { 0%,91%{opacity:0;transform:translate(-50%,-50%) scale(.85)} 94%,99%{opacity:1;transform:translate(-50%,-50%) scale(1)} 100%{opacity:0} }
-
 /* Sections */
 .section { padding-block: clamp(100px, 11vw, 160px); }
 .section-heading { display: grid; grid-template-columns: 1.35fr .65fr; gap: 70px; align-items: end; margin-bottom: 70px; }
@@ -459,15 +421,6 @@ a { color: inherit; }
   .proof-grid > div { min-height: 90px; padding-inline: 13px; }
   .proof-grid strong { font-size: 30px; }
   .proof-grid span { font-size: 7px; }
-  .trailer-window { box-shadow: 7px 8px 0 rgba(24,25,29,.12); }
-  .trailer-stage { aspect-ratio: 1.32 / 1; }
-  .trailer-top, .trailer-controls { min-height: 44px; padding-inline: 12px; }
-  .trailer-controls > div { display: none; }
-  .trailer-copy strong { font-size: 40px; }
-  .trailer-blob { width: 52px; height: 52px; }
-  .trailer-spikes { left: 48%; }
-  .trailer-spikes i { border-left-width: 20px; border-right-width: 20px; border-bottom-width: 58px; }
-  @keyframes trailerRun { 0%,18%{transform:none} 30%{transform:translate(240%,-150%) rotate(8deg) scale(.92,1.08)} 40%{transform:translate(340%,-10%) scale(1.1,.88)} 58%{transform:translate(440%,-25%)} 68%{transform:translate(540%,340%) rotate(70deg)} 100%{transform:translate(540%,340%) rotate(70deg)} }
   .section { padding-block: 92px; }
   .section-heading { gap: 28px; margin-bottom: 48px; }
   .section-heading h2, .levels-copy h2 { font-size: clamp(57px, 17vw, 86px); }

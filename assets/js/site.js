@@ -66,17 +66,6 @@
   });
   stage?.addEventListener('click', jump);
 
-  /* Animated trailer replay */
-  const trailer = document.querySelector('[data-trailer]');
-  document.querySelector('[data-replay]')?.addEventListener('click', () => {
-    if (!trailer) return;
-    trailer.classList.add('replay');
-    trailer.classList.remove('running');
-    void trailer.offsetWidth;
-    trailer.classList.add('running');
-    playTone(350, .05, 'square', .02);
-  });
-
   /* Level carousel */
   const carouselTrack = document.querySelector('[data-carousel-track]');
   const moveCarousel = (direction) => {
