@@ -9,7 +9,7 @@
   <link rel="canonical" href="https://eric3uy51752i6.github.io/dont-jump/privacy.html">
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/css/site.css?v=4">
+  <link rel="stylesheet" href="assets/css/site.css?v=7">
 </head>
 <body class="info-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -28,11 +28,19 @@
     <div class="info-grid">
       <section class="info-block">
         <h2>Local game data</h2>
-        <p>The browser game uses local browser storage to remember settings, unlocked levels, deaths, times, selected Blobs, daily results, and created levels. That data normally stays on your device in your browser.</p>
+        <p>The browser game uses local browser storage to remember settings, unlocked levels, deaths, times, selected Blobs, daily results, created levels, and an anonymous leaderboard player ID and callsign. That data normally stays on your device in your browser.</p>
+      </section>
+      <section class="info-block">
+        <h2>Online leaderboard</h2>
+        <p>If you submit a daily score, the leaderboard stores your generated callsign, anonymous player ID, challenge date and level, death count, completion time, and submission time. These scores are visible to other players. The site does not ask for your real name or email to submit a score.</p>
+      </section>
+      <section class="info-block">
+        <h2>Leaderboard safety</h2>
+        <p>To limit spam, the leaderboard briefly records a one-way hash made from network and player information. It is used only for rate limiting, expires automatically, and does not publish or store a raw IP address in the leaderboard score table.</p>
       </section>
       <section class="info-block">
         <h2>Clearing or moving progress</h2>
-        <p>Clearing site data, using private browsing, or changing devices or browsers may reset progress. The current web build does not claim to sync progress to an account.</p>
+        <p>Clearing site data, using private browsing, or changing devices or browsers may reset progress and generate a new leaderboard identity. The current web build does not claim to sync progress to an account.</p>
       </section>
       <section class="info-block">
         <h2>Rewarded-ad preview</h2>
@@ -40,18 +48,18 @@
       </section>
       <section class="info-block">
         <h2>Future iOS app</h2>
-        <p>The planned native iOS app may use platform services or advertising that are not part of this web version. Those practices must be disclosed in the iOS app’s production privacy policy before release.</p>
+        <p>The iPhone version is currently marked Coming Soon. The planned native app may use platform services or advertising that are not part of this web version, and those practices will be disclosed before release.</p>
       </section>
       <section class="info-block">
         <h2>Technical hosting</h2>
-        <p>This site is hosted with GitHub Pages. Like most web hosts, the hosting provider may process ordinary connection information needed to deliver the site. See GitHub’s own privacy materials for its practices.</p>
+        <p>This site is hosted with GitHub Pages, and the online leaderboard is designed to run on Cloudflare. Those providers may process ordinary connection information needed to deliver the site and prevent abuse. Their own privacy materials govern that processing.</p>
       </section>
       <section class="info-block">
         <h2>Questions</h2>
         <p>For privacy questions about DON’T JUMP, contact <a href="mailto:eric@teeter.com?subject=DON%E2%80%99T%20JUMP%20privacy">eric@teeter.com</a>.</p>
       </section>
     </div>
-    <p class="legal-meta">Last updated: August 20, 2026.</p>
+    <p class="legal-meta">Last updated: August 22, 2026.</p>
   </main>
   <footer class="site-footer"><div class="shell footer-bottom"><span>© 2026 DON’T JUMP</span><span><a href="./">HOME</a> · <a href="support.html">SUPPORT</a></span></div></footer>
 </body>

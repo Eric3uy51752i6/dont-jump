@@ -18,7 +18,8 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/css/site.css?v=6">
+  <meta name="leaderboard-api" content="">
+  <link rel="stylesheet" href="assets/css/site.css?v=7">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -32,9 +33,13 @@
       <div class="nav-links">
         <a href="#how">HOW IT WORKS</a>
         <a href="#levels">100 LEVELS</a>
+        <a href="#daily">DAILY</a>
         <a href="#blobs">BLOBS</a>
       </div>
-      <a class="button button--small button--ink" href="game/">PLAY NOW <span aria-hidden="true">→</span></a>
+      <div class="nav-actions">
+        <button class="sound-toggle" type="button" aria-label="Turn website sounds on" aria-pressed="false" data-sound>♪ <span>OFF</span></button>
+        <a class="button button--small button--ink" href="game/">PLAY NOW <span aria-hidden="true">→</span></a>
+      </div>
     </nav>
   </header>
 
@@ -85,6 +90,39 @@
         <div><strong>1</strong><span>BUTTON TO MASTER</span></div>
         <div><strong>0</strong><span>REASONS TO TRUST THE FLOOR</span></div>
         <div><strong>∞</strong><span>INSTANT RETRIES</span></div>
+      </div>
+    </section>
+
+    <section class="trailer section" id="trailer">
+      <div class="shell">
+        <div class="section-heading trailer-heading">
+          <div>
+            <p class="section-number">00 / THE PITCH</p>
+            <h2>TWELVE SECONDS.<br><em>THREE BAD IDEAS.</em></h2>
+          </div>
+          <p>A tiny animated taste of what happens when one innocent button meets a level with trust issues.</p>
+        </div>
+
+        <div class="trailer-window" data-trailer>
+          <div class="trailer-top"><span>DON’T JUMP · GAMEPLAY TEASER</span><b>00:12</b></div>
+          <div class="trailer-stage">
+            <div class="trailer-grid" aria-hidden="true"></div>
+            <div class="trailer-copy" aria-hidden="true">
+              <strong>ONE BUTTON.</strong><strong>BAD DECISIONS.</strong><strong>RETRY?</strong>
+            </div>
+            <div class="trailer-blob blob" aria-hidden="true"><i></i><i></i></div>
+            <div class="trailer-floor floor-a" aria-hidden="true"></div>
+            <div class="trailer-floor floor-b" aria-hidden="true"></div>
+            <div class="trailer-spikes" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="trailer-goal" aria-hidden="true"></div>
+            <div class="trailer-flash" aria-hidden="true">NOPE.</div>
+          </div>
+          <div class="trailer-controls">
+            <button type="button" data-replay>↻ REPLAY</button>
+            <div><span>ANIMATED PREVIEW</span><i aria-hidden="true"></i></div>
+            <a href="game/">PLAY THE REAL THING →</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -142,13 +180,100 @@
           </ol>
         </div>
       </div>
+
+      <div class="shell level-teasers" data-level-carousel>
+        <div class="teaser-header">
+          <div><span>LEVEL PREVIEWS</span><strong>NO SOLUTIONS. JUST WARNINGS.</strong></div>
+          <div class="carousel-buttons">
+            <button type="button" aria-label="Previous level previews" data-carousel-prev>←</button>
+            <button type="button" aria-label="Next level previews" data-carousel-next>→</button>
+          </div>
+        </div>
+        <div class="teaser-track" data-carousel-track>
+          <article class="level-teaser teaser-one">
+            <div><span class="teaser-blob blob"><i></i><i></i></span><i class="teaser-spike"></i><b></b></div>
+            <p><span>LEVEL 04</span><strong>THE FLOOR IS FINE</strong></p>
+          </article>
+          <article class="level-teaser teaser-two">
+            <div><span class="teaser-blob blob"><i></i><i></i></span><i class="teaser-spike"></i><i class="teaser-spike"></i><b></b></div>
+            <p><span>LEVEL 19</span><strong>LOOK UP</strong></p>
+          </article>
+          <article class="level-teaser teaser-three">
+            <div><span class="teaser-blob blob"><i></i><i></i></span><i class="teaser-spike"></i><b></b></div>
+            <p><span>LEVEL 43</span><strong>BAD GRAVITY</strong></p>
+          </article>
+          <article class="level-teaser teaser-four">
+            <div><span class="teaser-blob blob"><i></i><i></i></span><i class="teaser-spike"></i><i class="teaser-spike"></i><i class="teaser-spike"></i><b></b></div>
+            <p><span>LEVEL 77</span><strong>ABSOLUTELY NOT</strong></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="daily section" id="daily">
+      <div class="shell">
+        <div class="section-heading daily-heading">
+          <div>
+            <p class="section-number">03 / DAILY CHALLENGE</p>
+            <h2>SAME TRAP.<br><em>EVERYONE.</em></h2>
+          </div>
+          <p>A fresh level every day. Fewer deaths wins. Ties go to the faster Blob.</p>
+        </div>
+
+        <div class="daily-grid">
+          <article class="daily-card">
+            <div class="daily-card-top"><span data-daily-date>TODAY</span><b><i></i> DAILY</b></div>
+            <div class="daily-visual" aria-hidden="true">
+              <span class="daily-blob blob"><i></i><i></i></span>
+              <div class="daily-spikes"><i></i><i></i><i></i></div>
+              <b></b>
+            </div>
+            <div class="daily-info">
+              <span>LEVEL <b data-daily-level>--</b></span>
+              <h3 data-daily-name>LOADING TODAY’S BAD IDEA</h3>
+              <a class="button button--cream" href="game/">PLAY TODAY’S LEVEL →</a>
+            </div>
+          </article>
+
+          <article class="leaderboard-card">
+            <div class="leaderboard-title">
+              <div><span>LIVE ONLINE</span><h3>LEADERBOARD</h3></div>
+              <button type="button" aria-label="Refresh leaderboard" data-refresh-board>↻</button>
+            </div>
+            <div class="board-status" role="status" data-board-status>CONNECTING TO THE START LINE…</div>
+            <div class="leaderboard-scroll">
+              <table>
+                <thead><tr><th>RANK</th><th>PLAYER</th><th>DEATHS</th><th>TIME</th></tr></thead>
+                <tbody data-leaderboard>
+                  <tr class="empty-row"><td>—</td><td>WAITING FOR THE FIRST BRAVE BLOB</td><td>—</td><td>—</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <form class="score-form" data-score-form>
+              <div class="callsign-row">
+                <label>YOUR CALLSIGN <strong data-callsign>WOBBLY BLOB 00</strong></label>
+                <button type="button" data-shuffle-name>SHUFFLE</button>
+              </div>
+              <label><span>DEATHS</span><input type="number" name="deaths" min="0" max="9999" inputmode="numeric" required placeholder="12"></label>
+              <label><span>TIME (SECONDS)</span><input type="number" name="time" min="0.5" max="3600" step="0.1" inputmode="decimal" required placeholder="42.6"></label>
+              <button class="button button--red" type="submit" data-submit-score disabled>SUBMIT RUN</button>
+            </form>
+
+            <div class="board-footer">
+              <span>PLAYER-SUBMITTED · BEST RUN KEPT</span>
+              <button type="button" data-share-result disabled>SHARE RESULT ↗</button>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="blobs section" id="blobs">
       <div class="shell">
         <div class="section-heading blobs-heading">
           <div>
-            <p class="section-number">03 / QUESTIONABLE FRIENDS</p>
+            <p class="section-number">04 / QUESTIONABLE FRIENDS</p>
             <h2>UNLOCK<br><em>WEIRDER BLOBS.</em></h2>
           </div>
           <p>A new character every ten levels. Different personality. Same terrible judgment.</p>
@@ -175,6 +300,84 @@
       </div>
     </section>
 
+    <section class="creator section" id="create">
+      <div class="shell creator-grid">
+        <div class="creator-copy">
+          <p class="section-number">05 / BUILD THE BETRAYAL</p>
+          <h2>CREATE A LEVEL.<br><em>RUIN A FRIENDSHIP.</em></h2>
+          <p>Place platforms, hide traps, test your terrible idea, and challenge a friend to survive it. The level creator is planned for a future update.</p>
+          <span class="coming-pill">COMING LATER</span>
+        </div>
+        <div class="creator-board" aria-label="Preview of the planned level creator">
+          <div class="creator-toolbar"><span>MOVE</span><span>PLATFORM</span><span class="selected">SPIKE</span><span>TEST</span></div>
+          <div class="creator-canvas">
+            <div class="creator-gridlines"></div>
+            <span class="creator-blob blob"><i></i><i></i></span>
+            <i class="placed-spike spike-a"></i><i class="placed-spike spike-b"></i><i class="placed-spike spike-c"></i>
+            <b class="placed-platform platform-a"></b><b class="placed-platform platform-b"></b>
+            <span class="cursor-hand">+</span>
+          </div>
+          <div class="creator-bottom"><span>LEVEL: UNTITLED BAD IDEA</span><b>DRAFT SAVED</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="iphone section" id="iphone">
+      <div class="shell iphone-grid">
+        <div class="phone-wrap" aria-hidden="true">
+          <div class="phone">
+            <div class="phone-island"></div>
+            <div class="phone-screen">
+              <span class="phone-level">LEVEL 01</span>
+              <div class="phone-blob blob"><i></i><i></i></div>
+              <div class="phone-spikes"><i></i><i></i></div>
+              <div class="phone-ground"></div>
+              <strong>DON’T<br>JUMP.</strong>
+            </div>
+          </div>
+          <div class="app-icon"><span class="picker-blob"><i></i><i></i></span></div>
+        </div>
+
+        <div class="iphone-copy">
+          <p class="section-number">06 / POCKET-SIZED REGRET</p>
+          <h2>COMING TO<br><em>iPHONE.</em></h2>
+          <p>Built for one-thumb play with quick restarts, satisfying taps, sound, and haptics. The App Store version is being prepared now.</p>
+          <button class="button button--ink coming-button" type="button" disabled>COMING SOON</button>
+          <ul class="iphone-list">
+            <li><span>✓</span> ONE-THUMB CONTROLS</li>
+            <li><span>✓</span> HAPTIC FEEDBACK</li>
+            <li><span>✓</span> 100 LEVEL CAMPAIGN</li>
+            <li><span>✓</span> REWARDED ADS ONLY</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="updates" aria-label="Development updates">
+      <div class="shell updates-grid">
+        <article><span>LIVE NOW</span><strong>PLAYABLE WEB GAME</strong><a href="game/">PLAY →</a></article>
+        <article><span>IN POLISH</span><strong>100 LEVEL CAMPAIGN</strong><b>TESTING</b></article>
+        <article><span>UP NEXT</span><strong>iPHONE + TESTFLIGHT</strong><b>COMING SOON</b></article>
+      </div>
+    </section>
+
+    <section class="tester-wall section">
+      <div class="shell">
+        <div class="section-heading tester-heading">
+          <div>
+            <p class="section-number">07 / EARLY TESTERS</p>
+            <h2>YOUR REVIEW<br><em>COULD GO HERE.</em></h2>
+          </div>
+          <p>No fake quotes. The first reactions on this wall will come from people who actually played the game.</p>
+        </div>
+        <div class="tester-cards">
+          <article><span>01</span><strong>“YOUR PANICKED REACTION HERE.”</strong><small>FUTURE TESTER</small></article>
+          <article><span>02</span><strong>“YOUR DEATH COUNT HERE.”</strong><small>FUTURE TESTER</small></article>
+          <article class="tester-cta"><span>03</span><strong>BE FIRST TO SURVIVE IT.</strong><a href="game/">PLAY NOW →</a></article>
+        </div>
+      </div>
+    </section>
+
     <section class="final-cta">
       <div class="cta-spike" aria-hidden="true"></div>
       <div class="cta-blob blob" aria-hidden="true"><i></i><i></i></div>
@@ -196,6 +399,7 @@
     <div class="shell footer-bottom"><span>© 2026 DON’T JUMP</span><span>MADE WITH POOR JUDGMENT.</span></div>
   </footer>
 
-  <script src="assets/js/site.js?v=6" defer></script>
+  <script src="assets/js/leaderboard-config.js?v=1"></script>
+  <script src="assets/js/site.js?v=7" defer></script>
 </body>
 </html>

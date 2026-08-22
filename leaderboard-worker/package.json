@@ -1,0 +1,19 @@
+{
+  "name": "dont-jump-leaderboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "types": "wrangler types",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run types && npm run typecheck && wrangler deploy --dry-run",
+    "dev": "wrangler dev --local --port 8787",
+    "deploy:temporary": "wrangler deploy --temporary",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20260822.1",
+    "typescript": "7.0.2",
+    "wrangler": "4.125.0"
+  }
+}
