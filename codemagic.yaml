@@ -1,0 +1,84 @@
+workflows:
+  dont-jump-ios:
+    name: DON’T JUMP — TestFlight
+    instance_type: mac_mini_m2
+    max_build_duration: 120
+    environment:
+      xcode: 26.6
+      node: 22
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.ericrolene.dontjump
+      vars:
+        XCODE_PROJECT: ios-release/ios/App/App.xcodeproj
+        XCODE_SCHEME: App
+        BUNDLE_ID: com.ericrolene.dontjump
+    cache:
+      cache_paths:
+        - $HOME/.npm
+        - $HOME/Library/Caches/org.swift.swiftpm
+    scripts:
+      - name: Restore hardened iOS release source
+        script: |
+          set -euo pipefail
+          cat "$CM_BUILD_DIR"/.codemagic/ios-release.tar.gz.part-* > /tmp/ios-release.tar.gz
+          tar -xzf /tmp/ios-release.tar.gz -C "$CM_BUILD_DIR"
+      - name: Verify release source
+        script: |
+          set -euo pipefail
+          cd "$CM_BUILD_DIR/ios-release"
+          test -f package.json
+          test -f www/index.html
+          test -f config/PrivacyInfo.xcprivacy
+          test ! -d ios
+      - name: Install JavaScript dependencies
+        script: |
+          set -euo pipefail
+          cd "$CM_BUILD_DIR/ios-release"
+          npm install --no-audit --no-fund
+      - name: Configure and validate release
+        script: |
+          set -euo pipefail
+          cd "$CM_BUILD_DIR/ios-release"
+          npm run configure
+          npm run preflight
+      - name: Generate and patch native iOS project
+        script: |
+          set -euo pipefail
+          cd "$CM_BUILD_DIR/ios-release"
+          ./node_modules/.bin/cap add ios --packagemanager SPM
+          ./node_modules/.bin/cap sync ios
+          CM_BUILD_NUMBER="$BUILD_NUMBER" node scripts/patch-ios.mjs
+      - name: Apply Apple signing profiles
+        script: |
+          set -euo pipefail
+          xcode-project use-profiles
+      - name: Resolve Swift packages
+        script: |
+          set -euo pipefail
+          xcodebuild -resolvePackageDependencies \
+            -project "$CM_BUILD_DIR/$XCODE_PROJECT" \
+            -scheme "$XCODE_SCHEME"
+      - name: Build signed IPA
+        script: |
+          set -euo pipefail
+          xcode-project build-ipa \
+            --project "$CM_BUILD_DIR/$XCODE_PROJECT" \
+            --scheme "$XCODE_SCHEME"
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
+        expire_build_submitted_for_review: false
+    triggering:
+      events:
+        - tag
+      tag_patterns:
+        - pattern: "ios-v*"
+          include: true
+          source: true
