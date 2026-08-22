@@ -1,4 +1,4 @@
-const VERSION = 'dont-jump-v5-20260820';
+const VERSION = 'dont-jump-v6-20260822';
 const SHELL = [
   './',
   './index.html',
@@ -6,9 +6,9 @@ const SHELL = [
   './support.html',
   './privacy.html',
   './manifest.webmanifest',
-  './assets/css/site.css?v=4',
+  './assets/css/site.css?v=6',
   './assets/css/game-shell.css',
-  './assets/js/site.js',
+  './assets/js/site.js?v=6',
   './assets/js/game-shell.js',
   './assets/icons/favicon.svg',
   './assets/icons/icon-192.png',
@@ -24,7 +24,9 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
-  event.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((key) => key !== VERSION).map((key) => caches.delete(key)))));
+  event.waitUntil(caches.keys().then((keys) => Promise.all(
+    keys.filter((key) => key !== VERSION).map((key) => caches.delete(key))
+  )));
   self.clients.claim();
 });
 
@@ -33,22 +35,18 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') return;
 
   if (request.mode === 'navigate') {
-    event.respondWith(
-      fetch(request).then((response) => {
-        const copy = response.clone();
-        caches.open(VERSION).then((cache) => cache.put(request, copy));
-        return response;
-      }).catch(async () => (await caches.match(request)) || (await caches.match('./index.html')))
-    );
+    event.respondWith(fetch(request).then((response) => {
+      const copy = response.clone();
+      caches.open(VERSION).then((cache) => cache.put(request, copy));
+      return response;
+    }).catch(async () => (await caches.match(request)) || (await caches.match('./index.html'))));
     return;
   }
 
   if (new URL(request.url).origin === self.location.origin) {
-    event.respondWith(
-      caches.match(request).then((cached) => cached || fetch(request).then((response) => {
-        if (response.ok) caches.open(VERSION).then((cache) => cache.put(request, response.clone()));
-        return response;
-      }))
-    );
+    event.respondWith(caches.match(request).then((cached) => cached || fetch(request).then((response) => {
+      if (response.ok) caches.open(VERSION).then((cache) => cache.put(request, response.clone()));
+      return response;
+    })));
   }
 });

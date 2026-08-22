@@ -3,236 +3,199 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f3efe5">
+  <meta name="theme-color" content="#f5f0e7">
   <meta name="color-scheme" content="light">
   <title>DON’T JUMP — One Button. Bad Decisions.</title>
   <meta name="description" content="DON’T JUMP is a one-button platformer with 100 increasingly unreasonable levels. Tap. Jump. Regret.">
   <link rel="canonical" href="https://eric3uy51752i6.github.io/dont-jump/">
-
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DON’T JUMP">
   <meta property="og:title" content="DON’T JUMP — One Button. Bad Decisions.">
-  <meta property="og:description" content="100 increasingly unreasonable levels. Tap. Jump. Regret.">
+  <meta property="og:description" content="100 levels. One button. Absolutely no mercy.">
   <meta property="og:url" content="https://eric3uy51752i6.github.io/dont-jump/">
   <meta property="og:image" content="https://eric3uy51752i6.github.io/dont-jump/assets/social/dont-jump-social.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="A nervous white Blob approaching a red spike in DON’T JUMP">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DON’T JUMP — One Button. Bad Decisions.">
-  <meta name="twitter:description" content="Tap. Jump. Regret.">
-  <meta name="twitter:image" content="https://eric3uy51752i6.github.io/dont-jump/assets/social/dont-jump-social.png">
-
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/css/site.css?v=4">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoGame",
-    "name": "DON’T JUMP",
-    "description": "A one-button platformer with 100 increasingly unreasonable levels.",
-    "url": "https://eric3uy51752i6.github.io/dont-jump/",
-    "genre": ["Platformer", "Action"],
-    "gamePlatform": ["Web Browser", "iOS"],
-    "playMode": "SinglePlayer",
-    "operatingSystem": "Any modern web browser"
-  }
-  </script>
+  <link rel="stylesheet" href="assets/css/site.css?v=6">
 </head>
-<body class="home-page">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
-
-  <div class="boot" aria-hidden="true">
-    <div class="boot-blob blob blob--plain"><i></i><i></i></div>
-    <p>LOADING BAD DECISIONS</p>
-    <div class="boot-line"><span></span></div>
-  </div>
 
   <header class="site-header" data-header>
     <nav class="nav shell" aria-label="Main navigation">
-      <a class="wordmark" href="./" aria-label="DON’T JUMP home">
-        <span>DON’T JUMP</span><b aria-hidden="true"></b>
+      <a class="brand" href="./" aria-label="DON’T JUMP home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+        <span>DON’T JUMP</span>
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-        <span class="sr-only">Open navigation</span><i></i><i></i>
-      </button>
-      <div class="nav-links" id="nav-links">
+      <div class="nav-links">
+        <a href="#how">HOW IT WORKS</a>
         <a href="#levels">100 LEVELS</a>
         <a href="#blobs">BLOBS</a>
-        <a href="#daily">DAILY</a>
-        <a href="support.html">SUPPORT</a>
-        <a class="nav-play" href="game/"><span>PLAY</span><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M7 4l7 6-7 6z"/></svg></a>
       </div>
+      <a class="button button--small button--ink" href="game/">PLAY NOW <span aria-hidden="true">→</span></a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero shell" aria-labelledby="hero-title">
-      <div class="hero-copy" data-reveal>
-        <p class="eyebrow"><span></span> A ONE-BUTTON PLATFORMER</p>
-        <h1 id="hero-title"><span>DON’T</span><span class="hero-jump">JUMP<b aria-hidden="true"></b></span></h1>
-        <p class="hero-tagline">ONE BUTTON. <em>BAD DECISIONS.</em></p>
-        <p class="hero-intro">The Blob runs. You jump. The level lies. Make it through 100 increasingly unreasonable levels with your dignity mostly intact.</p>
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="kicker"><span></span> A ONE-BUTTON PLATFORMER</p>
+        <h1><span>DON’T</span><span>JUMP<i aria-hidden="true">.</i></span></h1>
+        <p class="hero-tagline">Sounds easy. <strong>It isn’t.</strong></p>
+        <p class="hero-intro">The Blob runs. You tap to jump. The level lies. Survive 100 increasingly unreasonable levels with your dignity mostly intact.</p>
         <div class="hero-actions">
-          <a class="button button--dark" href="game/"><span>PLAY NOW</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 5l10 7-10 7z"/></svg></a>
-          <a class="text-link" href="#tutorial">SEE HOW IT WORKS <span aria-hidden="true">↓</span></a>
+          <a class="button button--red" href="game/"><span class="play-icon" aria-hidden="true"></span> PLAY FREE</a>
+          <a class="quiet-link" href="#how">SEE THE TRAPS <span aria-hidden="true">↓</span></a>
         </div>
-        <p class="availability"><span aria-hidden="true"></span> PLAY FREE IN YOUR BROWSER · iOS COMING SOON</p>
+        <p class="availability"><i aria-hidden="true"></i> PLAY IN YOUR BROWSER · iPHONE VERSION COMING SOON</p>
       </div>
 
-      <div class="hero-game-wrap" data-reveal>
-        <button class="microgame" type="button" aria-label="Mini game: tap to make Blob jump" data-microgame>
-          <span class="micro-hud"><b>01</b><em>0 DEATHS</em></span>
-          <span class="cloud cloud--one" aria-hidden="true"></span>
-          <span class="cloud cloud--two" aria-hidden="true"></span>
-          <span class="micro-sign" aria-hidden="true">TAP!</span>
-          <span class="runner blob blob--plain" aria-hidden="true"><i></i><i></i></span>
-          <span class="micro-shadow" aria-hidden="true"></span>
-          <span class="spike spike--hero" aria-hidden="true"></span>
-          <span class="finish" aria-hidden="true"></span>
-          <span class="platform" aria-hidden="true"></span>
-          <span class="micro-result" aria-live="polite">NICE.</span>
-        </button>
-        <div class="tap-cue" aria-hidden="true"><span>TAP TO JUMP</span><i></i></div>
+      <div class="hero-preview" aria-label="Preview of the DON’T JUMP game">
+        <div class="preview-chrome">
+          <span>LEVEL 01</span>
+          <div aria-hidden="true"><i></i><i></i><i></i></div>
+          <span>0 DEATHS</span>
+        </div>
+        <div class="game-stage" data-stage>
+          <div class="stage-grid" aria-hidden="true"></div>
+          <div class="stage-cloud cloud-one" aria-hidden="true"></div>
+          <div class="stage-cloud cloud-two" aria-hidden="true"></div>
+          <div class="tap-label" aria-hidden="true">TAP!</div>
+          <div class="blob hero-blob" aria-hidden="true"><i></i><i></i></div>
+          <div class="blob-shadow" aria-hidden="true"></div>
+          <div class="spikes" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="goal" aria-hidden="true"><span></span></div>
+          <div class="ground" aria-hidden="true"></div>
+          <button class="stage-tap" type="button" data-jump>MAKE HIM JUMP</button>
+        </div>
+        <div class="preview-footer">
+          <span>SPACE / TAP</span>
+          <strong>ONE BUTTON. BAD DECISIONS.</strong>
+        </div>
+        <div class="floating-card floating-card--levels"><strong>100</strong><span>LEVELS</span></div>
+        <div class="floating-card floating-card--deaths"><strong>∞</strong><span>RETRIES</span></div>
       </div>
     </section>
 
-    <div class="marquee" aria-hidden="true">
-      <div><span>TAP.</span><b>JUMP.</b><span>REGRET.</span><i>NOPE.</i><span>TAP.</span><b>JUMP.</b><span>REGRET.</span><i>NOPE.</i></div>
-    </div>
+    <section class="proof" aria-label="Game highlights">
+      <div class="shell proof-grid">
+        <div><strong>100</strong><span>HAND-BUILT LEVELS</span></div>
+        <div><strong>1</strong><span>BUTTON TO MASTER</span></div>
+        <div><strong>0</strong><span>REASONS TO TRUST THE FLOOR</span></div>
+        <div><strong>∞</strong><span>INSTANT RETRIES</span></div>
+      </div>
+    </section>
 
-    <section class="tutorial shell section-pad" id="tutorial" aria-labelledby="tutorial-title">
-      <div class="section-label" data-reveal><span>01</span> THE ENTIRE TUTORIAL</div>
-      <div class="tutorial-grid">
-        <h2 id="tutorial-title" data-reveal><span>TAP</span><b>=</b><span>JUMP</span></h2>
-        <div class="tutorial-aside" data-reveal>
-          <p>That’s it.</p>
+    <section class="how section" id="how">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <p class="section-number">01 / HOW IT WORKS</p>
+            <h2>ONE RULE.<br><em>LOTS OF LIES.</em></h2>
+          </div>
           <p>We made the controls simple so the levels could spend all their energy being awful.</p>
         </div>
-      </div>
-      <div class="tutorial-track" aria-hidden="true" data-reveal>
-        <div class="tutorial-blob blob blob--plain"><i></i><i></i></div>
-        <div class="track-spikes"><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="track-label">THIS SEEMS FINE.</div>
-      </div>
-    </section>
 
-    <section class="hazards section-pad" aria-labelledby="hazards-title">
-      <div class="shell">
-        <div class="section-label section-label--light" data-reveal><span>02</span> TAP. JUMP. REGRET.</div>
-        <div class="hazard-heading">
-          <h2 id="hazards-title" data-reveal>THE LEVELS<br><em>FIGHT BACK.</em></h2>
-          <p data-reveal>Every clean line is suspicious. Every safe landing is temporary. The only honest thing here is the retry button.</p>
+        <div class="feature-grid">
+          <article class="feature-card feature-card--cream">
+            <span class="card-number">01</span>
+            <div class="tap-demo" aria-hidden="true"><div class="mini-blob"><i></i><i></i></div><span>TAP</span></div>
+            <h3>TAP TO JUMP</h3>
+            <p>That’s the entire tutorial. Timing is everything.</p>
+          </article>
+          <article class="feature-card feature-card--dark">
+            <span class="card-number">02</span>
+            <div class="trap-demo" aria-hidden="true"><div></div><i></i><i></i><i></i></div>
+            <h3>EXPECT BETRAYAL</h3>
+            <p>Moving spikes, fake floors, gravity flips and rude surprises.</p>
+          </article>
+          <article class="feature-card feature-card--red">
+            <span class="card-number">03</span>
+            <div class="retry-demo" aria-hidden="true"><strong>↻</strong><span>0.2 SEC</span></div>
+            <h3>RETRY INSTANTLY</h3>
+            <p>No waiting. No excuses. One more try.</p>
+          </article>
         </div>
       </div>
-      <div class="hazard-stage" data-reveal>
-        <div class="hazard-grid" aria-hidden="true"></div>
-        <div class="hazard-note note-one" aria-hidden="true">MOVING SPIKES</div>
-        <div class="hazard-note note-two" aria-hidden="true">GRAVITY? OPTIONAL.</div>
-        <div class="hazard-note note-three" aria-hidden="true">THE FLOOR LIED.</div>
-        <div class="hazard-blob blob blob--plain" aria-hidden="true"><i></i><i></i></div>
-        <div class="hazard-platform p-one" aria-hidden="true"></div>
-        <div class="hazard-platform p-two" aria-hidden="true"></div>
-        <div class="hazard-platform p-three" aria-hidden="true"></div>
-        <div class="hazard-spikes hs-one" aria-hidden="true"><i></i><i></i><i></i></div>
-        <div class="hazard-spikes hs-two" aria-hidden="true"><i></i><i></i></div>
-        <div class="hazard-fall" aria-hidden="true">NOPE.</div>
-      </div>
-      <div class="hazard-list shell" data-reveal>
-        <span>SURPRISE TRAPS</span><span>PITS</span><span>FAKE-OUTS</span><span>GRAVITY FLIPS</span><span>MOVING HAZARDS</span>
-      </div>
     </section>
 
-    <section class="levels section-pad" id="levels" aria-labelledby="levels-title">
-      <div class="shell levels-layout">
+    <section class="levels section" id="levels">
+      <div class="shell levels-grid">
         <div class="levels-copy">
-          <div class="section-label" data-reveal><span>03</span> THE CAMPAIGN</div>
-          <h2 id="levels-title" data-reveal><strong>100</strong> LEVELS.<br>ZERO MERCY.</h2>
-          <p data-reveal>Quick attempts. Instant retries. A steady climb from “I’ve got this” to “this game has a personal problem with me.”</p>
-          <a class="text-link" href="game/">START AT LEVEL 01 <span aria-hidden="true">→</span></a>
+          <p class="section-number">02 / THE CAMPAIGN</p>
+          <h2><em>100</em> LEVELS.<br>ZERO MERCY.</h2>
+          <p>Quick attempts and a steady climb from “I’ve got this” to “this game has a personal problem with me.”</p>
+          <a class="button button--cream" href="game/">START LEVEL 01 <span aria-hidden="true">→</span></a>
         </div>
-        <div class="level-stack" aria-label="A progression from level 1 to level 100" data-reveal>
-          <div class="level-column">
-            <span class="level-pill complete">01 <b>JUST JUMP</b></span>
-            <span class="level-pill">10 <b>FALSE SECURITY</b></span>
-            <span class="level-pill">25 <b>DON’T BLINK</b></span>
-            <span class="level-pill">50 <b>BAD GRAVITY</b></span>
-            <span class="level-pill">75 <b>ABSOLUTELY NOT</b></span>
-            <span class="level-pill danger">100 <b>YOU JUMPED.</b></span>
-          </div>
-          <div class="stack-line" aria-hidden="true"><i></i></div>
-          <div class="stack-blob blob blob--plain" aria-hidden="true"><i></i><i></i></div>
+
+        <div class="level-board" aria-label="Level progression from 1 to 100">
+          <div class="level-board-top"><span>CAMPAIGN</span><strong>1 / 100</strong></div>
+          <ol>
+            <li class="active"><span>01</span><strong>JUST JUMP</strong><i>PLAY</i></li>
+            <li><span>10</span><strong>FALSE SECURITY</strong><i>LOCKED</i></li>
+            <li><span>25</span><strong>DON’T BLINK</strong><i>LOCKED</i></li>
+            <li><span>50</span><strong>BAD GRAVITY</strong><i>LOCKED</i></li>
+            <li><span>75</span><strong>ABSOLUTELY NOT</strong><i>LOCKED</i></li>
+            <li class="boss"><span>100</span><strong>YOU JUMPED.</strong><i>???</i></li>
+          </ol>
         </div>
       </div>
     </section>
 
-    <section class="blobs section-pad" id="blobs" aria-labelledby="blobs-title">
+    <section class="blobs section" id="blobs">
       <div class="shell">
-        <div class="section-label" data-reveal><span>04</span> QUESTIONABLE FRIENDS</div>
-        <div class="blobs-heading">
-          <h2 id="blobs-title" data-reveal>UNLOCK<br><em>WEIRDER BLOBS.</em></h2>
-          <p data-reveal>They run differently. They panic differently. They all hit spikes exactly the same.</p>
-        </div>
-      </div>
-      <div class="blob-parade" aria-label="Unlockable Blob characters" data-reveal>
-        <button class="blob-card selected" type="button" aria-pressed="true" data-blob-name="THE ORIGINAL"><span class="blob blob--plain"><i></i><i></i></span><b>01</b></button>
-        <button class="blob-card" type="button" aria-pressed="false" data-blob-name="SUNNY SIDE"><span class="blob blob--yellow"><i></i><i></i></span><b>10</b></button>
-        <button class="blob-card" type="button" aria-pressed="false" data-blob-name="MIDNIGHT"><span class="blob blob--dark"><i></i><i></i></span><b>20</b></button>
-        <button class="blob-card" type="button" aria-pressed="false" data-blob-name="PANIC MODE"><span class="blob blob--red"><i></i><i></i></span><b>30</b></button>
-        <button class="blob-card" type="button" aria-pressed="false" data-blob-name="FROGISH"><span class="blob blob--green"><i></i><i></i></span><b>40</b></button>
-        <button class="blob-card locked" type="button" aria-pressed="false" data-blob-name="YOU HAVEN’T EARNED THIS"><span class="blob blob--mystery"><i></i><i></i></span><b>?</b></button>
-      </div>
-      <div class="blob-caption shell"><span data-blob-caption>THE ORIGINAL</span><b>UNLOCK A NEW BLOB EVERY 10 LEVELS</b></div>
-    </section>
-
-    <section class="daily section-pad" id="daily" aria-labelledby="daily-title">
-      <div class="shell daily-layout">
-        <div class="daily-copy">
-          <div class="section-label section-label--green" data-reveal><span>05</span> DAILY CHALLENGE</div>
-          <h2 id="daily-title" data-reveal>SAME LEVEL.<br>EVERYONE.<br><em>TODAY.</em></h2>
-          <p data-reveal>A fresh bad decision every day. Finish with fewer deaths. Share the result. Pretend it only took one try.</p>
-          <a class="button button--cream" href="game/"><span>PLAY TODAY’S LEVEL</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 5l10 7-10 7z"/></svg></a>
-        </div>
-        <div class="daily-board" data-reveal>
-          <div class="board-top"><span>TODAY · DAILY 247</span><b>LIVE</b></div>
-          <div class="board-course" aria-hidden="true">
-            <div class="board-blob blob blob--plain"><i></i><i></i></div>
-            <div class="board-spikes"><i></i><i></i><i></i></div>
-            <div class="board-goal"></div>
+        <div class="section-heading blobs-heading">
+          <div>
+            <p class="section-number">03 / QUESTIONABLE FRIENDS</p>
+            <h2>UNLOCK<br><em>WEIRDER BLOBS.</em></h2>
           </div>
-          <div class="board-result"><span>YOUR RUN</span><strong>—</strong><small>DEATHS</small></div>
-          <div class="board-bottom"><span>NEW CHALLENGE IN</span><b data-countdown>--:--:--</b></div>
+          <p>A new character every ten levels. Different personality. Same terrible judgment.</p>
         </div>
+
+        <div class="blob-picker" data-picker>
+          <button class="blob-choice selected" type="button" data-name="THE ORIGINAL" aria-pressed="true">
+            <span class="picker-blob blob--plain"><i></i><i></i></span><b>01</b><small>EQUIPPED</small>
+          </button>
+          <button class="blob-choice" type="button" data-name="SUNNY SIDE" aria-pressed="false">
+            <span class="picker-blob blob--yellow"><i></i><i></i></span><b>10</b><small>UNLOCK</small>
+          </button>
+          <button class="blob-choice" type="button" data-name="MIDNIGHT" aria-pressed="false">
+            <span class="picker-blob blob--dark"><i></i><i></i></span><b>20</b><small>UNLOCK</small>
+          </button>
+          <button class="blob-choice" type="button" data-name="PANIC MODE" aria-pressed="false">
+            <span class="picker-blob blob--red"><i></i><i></i></span><b>30</b><small>UNLOCK</small>
+          </button>
+          <button class="blob-choice" type="button" data-name="CLASSIFIED" aria-pressed="false">
+            <span class="picker-blob blob--mystery"><i>?</i></span><b>?</b><small>LOCKED</small>
+          </button>
+        </div>
+        <div class="picker-caption"><strong data-blob-name>THE ORIGINAL</strong><span>SELECT A BLOB TO MEET THE CREW</span></div>
       </div>
     </section>
 
-    <section class="final-cta" aria-labelledby="final-title">
-      <div class="final-spike" aria-hidden="true"></div>
+    <section class="final-cta">
+      <div class="cta-spike" aria-hidden="true"></div>
+      <div class="cta-blob blob" aria-hidden="true"><i></i><i></i></div>
       <div class="shell final-inner">
-        <div class="final-blob blob blob--plain" aria-hidden="true"><i></i><i></i></div>
-        <p data-reveal>YOU KNOW THE RULE.</p>
-        <h2 id="final-title" data-reveal>DON’T<br>JUMP.</h2>
-        <a class="button button--red" href="game/"><span>PLAY ANYWAY</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 5l10 7-10 7z"/></svg></a>
+        <p>YOU KNOW THE RULE.</p>
+        <h2>DON’T<br>JUMP.</h2>
+        <a class="button button--red" href="game/"><span class="play-icon" aria-hidden="true"></span> PLAY ANYWAY</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-top">
-      <a class="wordmark wordmark--footer" href="./"><span>DON’T JUMP</span><b aria-hidden="true"></b></a>
+    <div class="shell footer-grid">
+      <a class="brand" href="./"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>DON’T JUMP</span></a>
       <p>ONE BUTTON.<br>BAD DECISIONS.</p>
-      <div class="footer-links">
-        <a href="game/">Play</a><a href="#levels">Levels</a><a href="#blobs">Blobs</a><a href="#daily">Daily</a>
-      </div>
-      <div class="footer-links">
-        <a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="mailto:eric@teeter.com">Contact</a>
-      </div>
+      <div><a href="game/">Play</a><a href="#how">How it works</a><a href="#levels">Levels</a></div>
+      <div><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="mailto:eric@teeter.com">Contact</a></div>
     </div>
     <div class="shell footer-bottom"><span>© 2026 DON’T JUMP</span><span>MADE WITH POOR JUDGMENT.</span></div>
   </footer>
 
-  <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/site.js?v=6" defer></script>
 </body>
 </html>
